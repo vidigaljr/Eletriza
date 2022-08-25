@@ -1,6 +1,11 @@
 /* Bordered form */
 form {
     border: 3px solid #f1f1f1;
+    width: 600px;
+    position: relative;
+    right: -460px;
+    top: 200px;
+    align-items: center;
   }
   
   /* Full-width inputs */
@@ -69,3 +74,12 @@ form {
       width: 100%;
     }
   }
+
+  /* .container {
+    width: 600px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 200px;
+
+  } */
