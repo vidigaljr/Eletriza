@@ -26,7 +26,7 @@
               <a class="nav-link active" aria-current="page" [routerLink]="['/login']">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Cadastro</a>
+              <a class="nav-link" [routerLink]="['/cadastro']">Cadastro</a>
             </li>
           </ul>
         </div>
@@ -52,7 +52,7 @@
         <input type="checkbox" value="remember-me"> Lembre-se de mim
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Acessar</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit" [routerLink]="['/cadastrados']">Acessar</button>
   </form>
 </main>
   </body>

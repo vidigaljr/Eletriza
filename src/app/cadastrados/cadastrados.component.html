@@ -1,0 +1,67 @@
+<body>
+<ng-container >
+    <mat-toolbar class="example-header">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Eletriza</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/login']">Login</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/cadastro']">Cadastro</a>
+                    </li>
+                    <button mat-button (click)="sidenav.toggle()">Side</button>
+                </ul>
+                </div>
+            </div>
+            </nav>
+    </mat-toolbar>
+<div class="container">
+    <mat-sidenav-container >
+      <mat-sidenav #sidenav mode="side" opened class="sidenav">
+
+        <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
+            <mat-menu #animals="matMenu">
+                <button mat-menu-item >Vertebrates</button>
+                <button mat-menu-item >Invertebrates</button>
+            </mat-menu>
+      </mat-sidenav>
+      <mat-sidenav-content >
+        <p><mat-icon (click)="sidenav.toggle()">keyboard_arrow_left</mat-icon></p>
+        
+        <h2>Contatos Eletriza</h2>
+<hr>
+<table>
+    <tr>
+        <th>#id</th>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Número</th>
+        <th>Nome da Empresa</th>
+        <th>Ações</th>
+    </tr>
+
+
+    <tr *ngFor="let contato of cadastro">
+        <td>{{contato.id}}</td>
+        <td>{{contato.nome}}</td>
+        <td>{{contato.email}}</td>
+        <td>{{contato.numero}}</td>
+        <td>{{contato.nomedaempresa}}</td>
+        <td><button (click)="remover(contato.id)">Remover</button></td>
+        <td><button  (click)="atualizar(contato.id)">Atualizar</button></td>
+    </tr>
+</table>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+</div> 
+    <mat-toolbar class="example-footer">
+        <p>&copy; 2017–2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot;  <a href="#">Back to top</a></p></mat-toolbar>
+  </ng-container>
+</body>
+  
