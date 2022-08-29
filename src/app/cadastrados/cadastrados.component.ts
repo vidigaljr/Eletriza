@@ -12,6 +12,7 @@ export class CadastradosComponent implements OnInit {
   constructor(private cadastroService: CadastrosService) { }
 
   ngOnInit(): void {
+    this.listarCadastro();
   }
 
   listarCadastro(){

@@ -15,7 +15,6 @@
                     <li class="nav-item">
                     <a class="nav-link" [routerLink]="['/cadastro']">Cadastro</a>
                     </li>
-                    <button mat-button (click)="sidenav.toggle()">Side</button>
                 </ul>
                 </div>
             </div>
@@ -25,10 +24,10 @@
     <mat-sidenav-container >
       <mat-sidenav #sidenav mode="side" opened class="sidenav">
 
-        <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
-            <mat-menu #animals="matMenu">
-                <button mat-menu-item >Vertebrates</button>
-                <button mat-menu-item >Invertebrates</button>
+        <button class="butao" mat-button [matMenuTriggerFor]="cadastros">Cadastros</button>
+            <mat-menu #cadastros="matMenu">
+                <button mat-menu-item >Contatos</button>
+                <button mat-menu-item >Testes</button>
             </mat-menu>
       </mat-sidenav>
       <mat-sidenav-content >
@@ -37,7 +36,7 @@
         <h2>Contatos Eletriza</h2>
 <hr>
 <table>
-    <tr>
+    <tr >
         <th>#id</th>
         <th>Nome</th>
         <th>E-mail</th>
@@ -48,13 +47,13 @@
 
 
     <tr *ngFor="let contato of cadastro">
-        <td>{{contato.id}}</td>
-        <td>{{contato.nome}}</td>
-        <td>{{contato.email}}</td>
-        <td>{{contato.numero}}</td>
-        <td>{{contato.nomedaempresa}}</td>
-        <td><button (click)="remover(contato.id)">Remover</button></td>
-        <td><button  (click)="atualizar(contato.id)">Atualizar</button></td>
+        <th>{{contato.id}}</th>
+        <th>{{contato.nome}}</th>
+        <th>{{contato.email}}</th>
+        <th>{{contato.numero}}</th>
+        <th>{{contato.nomedaempresa}}</th>
+        <th><button (click)="remover(contato.id)">Remover</button></th>
+        <th><button  (click)="atualizar(contato.id)" [routerLink]="['/cadastro']">Atualizar</button></th>
     </tr>
 </table>
       </mat-sidenav-content>
