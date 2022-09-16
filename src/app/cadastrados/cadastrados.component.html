@@ -53,7 +53,7 @@
         <th>{{contato.numero}}</th>
         <th>{{contato.nomedaempresa}}</th>
         <th><button (click)="remover(contato.id)">Remover</button></th>
-        <th><button  (click)="atualizar(contato.id)" [routerLink]="['/cadastro']">Atualizar</button></th>
+        <th><button (click)="atualizar(contato)" [routerLink]="['/cadastro']" [queryParams]="{contatoId: contato.id}">Atualizar</button></th>
     </tr>
 </table>
       </mat-sidenav-content>

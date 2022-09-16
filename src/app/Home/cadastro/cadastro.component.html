@@ -40,7 +40,10 @@
             <input type="text" name="nomedaempresa" [(ngModel)]="contato.nomedaempresa" class="form-control"  placeholder="Número da Empresa">
             <label for="floatingInput">Nome da Empresa</label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" (click)="Cadastrar()">Cadastrar</button>
+        
+        <button class="w-100 btn btn-lg btn-primary" *ngIf="this.contatoId === 0" (click)="Cadastrar()">Cadastrar</button>
+        <button class="w-100 btn btn-lg btn-primary" *ngIf="this.contatoId > 0" (click)="Atualizar()">Atualizar</button>
+
         </form>
     </main>
 </body>

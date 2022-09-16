@@ -4,12 +4,12 @@ import { AppRoutingModule } from './app.routing.component';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HomeModule } from './Home/home.module';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { InicioComponent } from './inicio/inicio.component';
-import { LoginComponent } from './institucional/login/login.component';
-import { CadastroComponent } from './institucional/cadastro/cadastro.component';
+import { LoginComponent } from './Home/login/login.component';
+import { CadastroComponent } from './Home/cadastro/cadastro.component';
 import { CadastradosComponent } from './cadastrados/cadastrados.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -21,10 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    InicioComponent,
     LoginComponent,
     CadastroComponent,
-    CadastradosComponent
+    CadastradosComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,10 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatMenuModule,
     MatIconModule,
     HttpClientModule,
-    FormsModule
-    
-
-
+    HomeModule,
+    FormsModule,
   ],
   providers: [CadastrosService,HttpClientModule],
   bootstrap: [AppComponent],

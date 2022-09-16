@@ -1,13 +1,15 @@
+import { FooterComponent } from './Home/footer/footer.component';
+import { HomeComponent } from './Home/home.component';
 import { CadastradosComponent } from './cadastrados/cadastrados.component';
-import { CadastroComponent } from './institucional/cadastro/cadastro.component';
+import { CadastroComponent } from './Home/cadastro/cadastro.component';
 
-import { InicioComponent } from './inicio/inicio.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './institucional/login/login.component';
+import { LoginComponent } from './Home/login/login.component';
 
 const routes: Routes = [
-  {path:'', component: InicioComponent},
+  {path:'', component: HomeComponent},
   {path:'login', component: LoginComponent },
   {path:'cadastro', component:CadastroComponent},
   {path:'cadastrados', component:CadastradosComponent}
