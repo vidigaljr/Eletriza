@@ -6,6 +6,7 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
+  background: linear-gradient(342deg, rgba(2,0,36,1) 0%, rgba(0,0,3,1) 26%, rgba(83,0,0,1) 66%, rgba(83,0,0,1) 83%);
 }
 
 .form-signin {

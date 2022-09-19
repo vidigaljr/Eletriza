@@ -6,6 +6,7 @@ body {
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
+    background: linear-gradient(342deg, rgba(2,0,36,1) 0%, rgba(0,0,3,1) 26%, rgba(83,0,0,1) 66%, rgba(83,0,0,1) 83%);
   }
   
   .form-signin {
@@ -43,6 +44,8 @@ body {
     align-items: center;
     box-shadow: 5px 7px 7px 2px rgba(255, 0, 0, 0.4);
     border-radius: 50%;
+    src: url('src\app\imagens\eletre.jpg');
+
   }
   nav
   {

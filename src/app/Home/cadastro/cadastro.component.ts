@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CadastroModel } from 'src/app/cadastrados/cadastro-model/cadastro.model';
 import { Observable } from 'rxjs';
-
 @Component({
   selector: 'spa-cadastro',
   templateUrl: './cadastro.component.html',
